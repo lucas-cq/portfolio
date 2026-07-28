@@ -15,23 +15,34 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Lucas Cummings — Full Stack Engineer",
   description:
-    "Full stack engineer building mobile & web products. Lead developer on Universe Money Transfer, a regulated Canadian remittance platform shipped to iOS, Android, and web.",
+    "Full stack engineer building mobile & web products. Sole developer on Universe Money Transfer, a regulated Canadian remittance platform shipped to iOS, Android, and web. Node.js, TypeScript, React, PostgreSQL.",
   keywords: [
     "Lucas Cummings",
-    "Full Stack Developer",
+    "Full Stack Engineer",
+    "Node.js",
+    "TypeScript",
+    "React",
+    "PostgreSQL",
     "Next.js",
     "Flutter",
-    "Firebase",
+    "Fintech",
+    "Payments",
     "Calgary",
-    "Web Developer",
+    "Remote Canada",
   ],
   authors: [{ name: "Lucas Cummings" }],
   openGraph: {
     title: "Lucas Cummings — Full Stack Engineer",
     description:
-      "Full stack engineer building mobile & web products across Node.js, TypeScript, Firebase, and GCP.",
+      "Full stack engineer building fintech and web products across Node.js, TypeScript, React, and PostgreSQL.",
     type: "website",
     locale: "en_CA",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lucas Cummings — Full Stack Engineer",
+    description:
+      "Full stack engineer building fintech and web products across Node.js, TypeScript, React, and PostgreSQL.",
   },
 };
 

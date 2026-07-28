@@ -18,7 +18,7 @@ export default function Contact() {
             Have a project in mind?
           </h2>
           <p className="mx-auto mt-5 max-w-lg text-lg leading-relaxed text-muted">
-            I&apos;m {profile.availability.toLowerCase()}. Drop me a line and let&apos;s talk.
+            I&apos;m {profile.availability.charAt(0).toLowerCase() + profile.availability.slice(1)}. Drop me a line and let&apos;s talk.
           </p>
 
           <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
@@ -64,7 +64,7 @@ export default function Contact() {
         </div>
 
         <p className="mt-8 text-center font-mono text-xs text-muted-soft">
-          © {year} {profile.name} · Built with Next.js. Protected under an MIT License.
+          © {year} {profile.name} · Built with Next.js.
         </p>
       </div>
     </footer>

@@ -17,7 +17,7 @@ export default function Skills() {
           <p className="text-lg leading-relaxed text-muted">{profile.summary}</p>
 
           <div className="mt-8 flex flex-wrap gap-2">
-            {["Node.js", "TypeScript", "Next.js", "React", "Firebase", "GCP"].map((t) => (
+            {["Node.js", "TypeScript", "React", "Next.js", "PostgreSQL", "GCP"].map((t) => (
               <span
                 key={t}
                 className="rounded-full border border-border bg-surface px-3.5 py-1.5 font-mono text-xs text-muted"
