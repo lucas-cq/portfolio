@@ -9,13 +9,13 @@ export const profile = {
   availability: "Open to roles in Calgary or fully remote across Canada",
   tagline: "A modern website built by a web developer.",
   summary:
-    "Full stack engineer with 4+ years of production experience. Sole developer on Universe Money Transfer, a regulated Canadian remittance platform shipped to iOS, Android, and web. I build across Node.js, TypeScript, React, and PostgreSQL — with hands-on work in KYC/AML compliance, live payment integrations, and production LLM integration. AI-native workflow (Claude Code daily).",
+    "Full stack engineer with 4+ years of production experience designing, building, and deploying software end to end. I owned a regulated Canadian fintech platform from architecture through APIs, cloud infrastructure, security, and release. Day to day I work across TypeScript, React, Next.js, Node.js, and PostgreSQL on Google Cloud, with real CI/CD, automated testing, and agile delivery. I also ship production Gen AI on the OpenAI API and develop with Claude Code daily. I'm just as comfortable turning technical trade-offs into plain language for non-technical stakeholders.",
 };
 
 export const socials = [
   { label: "GitHub", href: "https://github.com/lucas-cq", handle: "@lucas-cq" },
+  { label: "LinkedIn", href: "https://linkedin.com/in/lucas-cummings", handle: "in/lucas-cummings" },
   { label: "Email", href: "mailto:lucas.cummings024@gmail.com", handle: "lucas.cummings024@gmail.com" },
-  { label: "Site", href: "https://lucascummings.ca", handle: "lucascummings.ca" },
 ];
 
 export const navLinks = [
@@ -39,41 +39,53 @@ export const skills: SkillGroup[] = [
     items: ["TypeScript", "JavaScript (ES6+)", "SQL", "Dart", "HTML5", "CSS3"],
   },
   {
-    key: "frontend-mobile",
-    label: "Frontend & Mobile",
-    items: ["React", "Next.js", "Flutter"],
+    key: "frameworks-frontend",
+    label: "Frameworks & Frontend",
+    items: ["React", "Next.js", "Node.js", "Flutter"],
   },
   {
-    key: "backend-data",
-    label: "Backend & Data",
+    key: "cloud-integration",
+    label: "Cloud & Integration",
     items: [
-      "Node.js",
-      "PostgreSQL",
-      "Firebase (Cloud Functions, Auth, FCM)",
       "Google Cloud Platform",
+      "Firebase (Cloud Functions, Auth, FCM)",
+      "serverless",
       "REST APIs",
-      "Webhooks",
+      "webhooks",
+      "third-party integrations",
     ],
   },
   {
-    key: "ai-llm",
-    label: "AI & LLM",
-    items: ["OpenAI API (production)", "prompt engineering", "Claude Code"],
+    key: "data",
+    label: "Data",
+    items: ["PostgreSQL", "relational schema design", "query optimization", "migrations"],
   },
   {
-    key: "testing-delivery",
-    label: "Testing & Delivery",
-    items: ["Jest", "Git / GitHub", "CI/CD", "App Store / Play Store", "Agile / Scrum"],
+    key: "gen-ai",
+    label: "Gen AI & AI-Assisted SDLC",
+    items: ["OpenAI API (production)", "prompt engineering", "AI-accelerated delivery", "Claude Code"],
   },
   {
-    key: "payments-compliance",
-    label: "Payments & Compliance",
+    key: "delivery",
+    label: "Delivery & Practices",
     items: [
-      "Interac e-Transfer",
-      "payment gateway integration",
-      "Sumsub KYC/AML",
+      "Git / GitHub",
+      "CI/CD",
+      "Jest",
+      "code review",
+      "Agile / Scrum",
+      "technical documentation",
+      "App Store / Play Store",
+    ],
+  },
+  {
+    key: "security-compliance",
+    label: "Security & Compliance",
+    items: [
+      "KYC/AML (Sumsub)",
       "2FA / MFA",
       "end-to-end encryption",
+      "auditable data design",
       "PIPEDA",
     ],
   },
@@ -93,27 +105,27 @@ export const projects: Project[] = [
   {
     name: "Universe Money Transfer",
     category: "Fintech · Remittance Platform",
-    year: "2024 — 2026",
+    year: "2024–2026",
     featured: true,
     description:
-      "A regulated Canadian international remittance platform shipped to iOS, Android, and web from a single Flutter codebase. I owned the full SDLC as the sole developer — architecture through App Store deployment, monitoring, and iteration.",
+      "A regulated Canadian international remittance platform, shipped to iOS, Android, and web from a single Flutter codebase. I owned the full lifecycle as the sole developer, from solution design and estimation through implementation, deployment, production monitoring, and iteration.",
     highlights: [
-      "Real-time reconciliation engine for Interac e-Transfer (no direct API available) — automated parsing, idempotent matching, duplicate detection, retries, and partial-match resolution for live money movement in production",
-      "Data layer on PostgreSQL alongside a serverless Firebase + GCP backend powering real-time transaction state and push notifications",
-      "Full KYC/AML onboarding pipeline via Sumsub to meet Canadian financial compliance",
-      "2FA and end-to-end encryption across the auth surface",
+      "Designed and built the transaction reconciliation engine for Interac e-Transfer where no direct API was available at our scale: automated parsing, idempotent matching, duplicate detection, retry handling, and partial-match resolution against live money movement.",
+      "Architected the data layer in PostgreSQL alongside a serverless Google Cloud and Firebase backend (Cloud Functions, Auth, FCM), supporting real-time transaction state, notifications, and auditable records for compliance review.",
+      "Built and integrated APIs across payment rails and identity, including a full KYC/AML onboarding pipeline via Sumsub, 2FA, and end-to-end encryption to meet Canadian financial regulatory requirements.",
+      "Shipped to iOS, Android, and web from one codebase, owning release management, store submissions, and post-release troubleshooting across the application, data, and infrastructure layers.",
     ],
     stack: ["Flutter", "Node.js", "TypeScript", "PostgreSQL", "Firebase", "GCP", "Sumsub"],
   },
   {
     name: "AI Lead Classifier",
-    category: "Automation · AI",
+    category: "Gen AI · Automation",
     year: "2023",
     description:
-      "A production LLM integration: Node.js service using the OpenAI API to classify and filter spam from inbound HubSpot leads, eliminating the majority of manual review for the sales team.",
+      "A production Gen AI integration: a Node.js service on the OpenAI API that classifies and filters inbound HubSpot leads, removing the majority of manual lead review for the sales team.",
     highlights: [
       "OpenAI-driven classification wired into the HubSpot lead pipeline",
-      "Eliminated the majority of manual triage for the sales team",
+      "Removed the majority of manual triage for the sales team",
     ],
     stack: ["Node.js", "OpenAI API", "Webhooks"],
   },
@@ -122,7 +134,7 @@ export const projects: Project[] = [
     category: "Process Automation",
     year: "2023",
     description:
-      "Cross-team automations for client onboarding and offboarding, syncing notifications across sales, account, design, and dev teams to remove handoff friction.",
+      "Cross-team automations for client onboarding and offboarding, coordinating handoffs across sales, accounts, design, and development to reduce friction and rework.",
     highlights: [
       "Automated multi-team notification sync",
       "Removed manual handoff friction between departments",
@@ -132,12 +144,12 @@ export const projects: Project[] = [
   {
     name: "Client Web Applications",
     category: "Web · Agency",
-    year: "2022 — 2026",
+    year: "2022–2026",
     description:
-      "Web applications and integrations delivered for SMB and enterprise clients using Next.js, JavaScript, and third-party APIs.",
+      "Web applications and third-party API integrations for SMB and enterprise clients, built with Next.js and scoped directly with stakeholders to turn business needs into working software.",
     highlights: [
-      "Custom applications and integrations for SMB and enterprise clients",
-      "Performance- and SEO-minded builds",
+      "Requirements scoped directly with stakeholders",
+      "Business needs translated into shippable technical solutions",
     ],
     stack: ["Next.js", "JavaScript", "REST APIs"],
   },
@@ -154,35 +166,35 @@ export type TimelineEntry = {
 
 export const journey: TimelineEntry[] = [
   {
-    role: "Full Stack Engineer — Universe Money Transfer",
-    org: "Engagement within GrowME Marketing",
+    role: "Full Stack Engineer, Universe Money Transfer",
+    org: "Fintech venture within GrowME",
     location: "Calgary, AB",
-    period: "Feb 2024 — May 2026",
+    period: "Feb 2024 – May 2026",
     tag: "Fintech",
     points: [
-      "Engineered a regulated Canadian international remittance platform, shipped to iOS, Android, and web from a single Flutter codebase.",
-      "Built a real-time transaction reconciliation engine for Interac e-Transfer: idempotent matching, duplicate detection, retries, and partial-match resolution for live money movement in production.",
-      "Designed the data layer on PostgreSQL alongside a serverless Firebase / GCP backend (Cloud Functions, Auth, FCM).",
-      "Implemented a full KYC/AML onboarding pipeline via Sumsub, plus 2FA and end-to-end encryption, to meet Canadian financial compliance requirements.",
-      "Owned the full SDLC: architecture, development, QA, store deployment, monitoring, and iteration.",
+      "Owned a regulated Canadian remittance platform across the full lifecycle, from solution design and estimation through implementation, deployment, production monitoring, and iteration.",
+      "Designed and built the transaction reconciliation engine for Interac e-Transfer where no direct API was available at our scale: automated parsing, idempotent matching, duplicate detection, retry handling, and partial-match resolution against live money movement.",
+      "Architected the PostgreSQL data layer alongside a serverless Google Cloud and Firebase backend (Cloud Functions, Auth, FCM), supporting real-time transaction state, notifications, and auditable records for compliance review.",
+      "Built and integrated APIs across payment rails and identity, including a full KYC/AML onboarding pipeline via Sumsub, 2FA, and end-to-end encryption to meet Canadian financial regulatory requirements.",
+      "Shipped to iOS, Android, and web from a single codebase, owning release management, store submissions, and post-release troubleshooting.",
     ],
   },
   {
     role: "Full Stack Engineer",
     org: "GrowME Marketing",
     location: "Calgary, AB",
-    period: "Jan 2022 — May 2026",
+    period: "Jan 2022 – May 2026",
     tag: "Full-time",
     points: [
-      "Built and shipped a production LLM integration: a Node.js service using the OpenAI API to classify and filter spam from inbound HubSpot leads.",
-      "Selected by executive leadership to lead the technical build of the CEO's fintech venture (Universe Money Transfer).",
-      "Designed cross-team automations for client onboarding and offboarding across sales, account, design, and dev teams.",
-      "Delivered web applications for SMB and enterprise clients using Next.js and third-party API integrations.",
+      "Delivered web applications for SMB and enterprise clients using Next.js and third-party API integrations, scoping requirements directly with stakeholders and translating business needs into technical solutions.",
+      "Built and shipped a production Gen AI integration: a Node.js service on the OpenAI API that classifies and filters inbound HubSpot leads, removing the majority of manual lead review for the sales team.",
+      "Designed cross-team automations for client onboarding and offboarding, coordinating handoffs across sales, accounts, design, and development.",
+      "Worked within agile delivery cycles across concurrent client engagements, balancing competing priorities and communicating technical trade-offs to non-technical audiences.",
     ],
   },
   {
-    role: "Web Developer Certificate — with Honours",
-    org: "SAIT — Southern Alberta Institute of Technology",
+    role: "Web Developer Certificate, with Honours",
+    org: "SAIT (Southern Alberta Institute of Technology)",
     location: "Calgary, AB",
     period: "2022",
     tag: "Education",
@@ -195,5 +207,5 @@ export const journey: TimelineEntry[] = [
 export const stats = [
   { value: "4+", label: "Years in production" },
   { value: "3", label: "Platforms shipped" },
-  { value: "100%", label: "SDLC ownership" },
+  { value: "100%", label: "Lifecycle ownership" },
 ];

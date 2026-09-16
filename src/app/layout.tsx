@@ -13,17 +13,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Lucas Cummings — Full Stack Engineer",
+  title: "Lucas Cummings · Full Stack Engineer",
   description:
-    "Full stack engineer building mobile & web products. Sole developer on Universe Money Transfer, a regulated Canadian remittance platform shipped to iOS, Android, and web. Node.js, TypeScript, React, PostgreSQL.",
+    "Full stack engineer with 4+ years of production experience across TypeScript, React, Next.js, Node.js, and PostgreSQL on Google Cloud. I owned a regulated Canadian fintech platform end to end, from architecture through APIs, security, and release.",
   keywords: [
     "Lucas Cummings",
     "Full Stack Engineer",
-    "Node.js",
     "TypeScript",
     "React",
-    "PostgreSQL",
     "Next.js",
+    "Node.js",
+    "PostgreSQL",
+    "Google Cloud",
+    "Gen AI",
+    "OpenAI API",
     "Flutter",
     "Fintech",
     "Payments",
@@ -32,17 +35,17 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Lucas Cummings" }],
   openGraph: {
-    title: "Lucas Cummings — Full Stack Engineer",
+    title: "Lucas Cummings · Full Stack Engineer",
     description:
-      "Full stack engineer building fintech and web products across Node.js, TypeScript, React, and PostgreSQL.",
+      "Full stack engineer building fintech and web products across TypeScript, React, Next.js, Node.js, and PostgreSQL.",
     type: "website",
     locale: "en_CA",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lucas Cummings — Full Stack Engineer",
+    title: "Lucas Cummings · Full Stack Engineer",
     description:
-      "Full stack engineer building fintech and web products across Node.js, TypeScript, React, and PostgreSQL.",
+      "Full stack engineer building fintech and web products across TypeScript, React, Next.js, Node.js, and PostgreSQL.",
   },
 };
 

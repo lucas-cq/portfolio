@@ -5,9 +5,9 @@ import Reveal, { SectionHeading } from "./Reveal";
 import { profile } from "@/lib/data";
 
 const facts = [
-  { key: "based_in", value: "Calgary, AB — born & raised" },
+  { key: "based_in", value: "Calgary, AB, born & raised" },
   { key: "crew", value: "my wife & our dog, Benji" },
-  { key: "focus", value: "shipping real products, end-to-end" },
+  { key: "focus", value: "shipping real products end to end" },
 ];
 
 export default function About() {
@@ -27,7 +27,7 @@ export default function About() {
               <div className="relative aspect-[3/4] overflow-hidden rounded-2xl">
                 <Image
                   src="/lucas.webp"
-                  alt={`${profile.name} — ${profile.role}`}
+                  alt={`${profile.name}, ${profile.role}`}
                   fill
                   sizes="(max-width: 1024px) 90vw, 360px"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -48,11 +48,10 @@ export default function About() {
         {/* Copy */}
         <Reveal delay={0.1} className="order-2">
           <p className="text-lg leading-relaxed text-muted">
-            I&apos;m a full stack
-            engineer who likes shipping things people actually use. Over the last
-            4+ years I&apos;ve taken a regulated fintech platform from a blank repo
-            all the way to the App Store — and I care just as much about the small
-            details as the big systems.
+            I&apos;m a full stack engineer who likes shipping things people
+            actually use. Over the last 4+ years I took a regulated fintech
+            platform from an empty repo to the App Store, and I care about the
+            small details as much as the big systems.
           </p>
           <p className="mt-5 text-lg leading-relaxed text-muted">
             When I&apos;m not building, you&apos;ll find me somewhere around Calgary
