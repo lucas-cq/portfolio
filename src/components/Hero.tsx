@@ -152,7 +152,7 @@ export default function Hero() {
             transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
             className="absolute -right-1 bottom-10 rounded-xl border border-border bg-surface/80 px-3 py-2 font-mono text-xs text-muted backdrop-blur-xl"
           >
-            <span className="text-accent">deploy</span>(iOS, Android, web)
+            <span className="text-accent">deploy</span>(web, iOS, Android)
           </motion.div>
         </motion.div>
       </div>
