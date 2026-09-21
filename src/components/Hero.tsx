@@ -61,7 +61,7 @@ export default function Hero() {
               {profile.name}
               <span
                 aria-hidden="true"
-                className="ml-3 inline-block h-[0.8em] w-[0.5rem] translate-y-[0.07em] rounded-[2px] bg-accent shadow-[0_0_24px_rgba(251,78,99,0.55)]"
+                className="caret-blink ml-3 inline-block h-[0.8em] w-[0.5rem] translate-y-[0.07em] rounded-[2px] bg-accent shadow-[0_0_24px_rgba(251,78,99,0.55)]"
               />
             </motion.h1>
 
