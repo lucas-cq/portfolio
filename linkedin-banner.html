@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1584, initial-scale=1" />
+    <title>Lucas Cummings — LinkedIn Banner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --background: #0b0b0d;
+        --surface: #16161b;
+        --foreground: #f4f4f5;
+        --muted: #9a9aa3;
+        --muted-soft: #6e6e78;
+        --accent: #fb4e63;
+        --accent-bright: #ff6a7d;
+        --border: rgba(255, 255, 255, 0.08);
+        --font-sans: "Geist", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        --font-mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        background: #000;
+      }
+
+      /* Exact banner canvas — screenshot this element (or the 1584x396 viewport). */
+      .banner {
+        position: relative;
+        width: 1584px;
+        height: 396px;
+        overflow: hidden;
+        background: var(--background);
+        font-family: var(--font-sans);
+        color: var(--foreground);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* Dotted grid backdrop (matches the site) */
+      .banner::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        background-size: 30px 30px;
+        z-index: 0;
+      }
+
+      /* Ambient coral glow, top-right */
+      .glow {
+        position: absolute;
+        z-index: 0;
+        border-radius: 999px;
+        pointer-events: none;
+        background: radial-gradient(
+          circle at center,
+          rgba(251, 78, 99, 0.28) 0%,
+          rgba(251, 78, 99, 0.09) 38%,
+          transparent 70%
+        );
+      }
+      .glow-a {
+        top: -240px;
+        right: -160px;
+        width: 700px;
+        height: 700px;
+      }
+      .glow-b {
+        bottom: -260px;
+        right: 300px;
+        width: 480px;
+        height: 480px;
+        opacity: 0.55;
+      }
+
+      /* Faint monogram watermark bleeding off the right edge */
+      .watermark {
+        position: absolute;
+        right: -60px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 380px;
+        height: 380px;
+        opacity: 0.06;
+        z-index: 0;
+      }
+
+      /* Editor chrome bar */
+      .titlebar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 0 26px;
+        border-bottom: 1px solid var(--border);
+        background: rgba(22, 22, 27, 0.55);
+        backdrop-filter: blur(6px);
+        z-index: 3;
+      }
+      .dot {
+        width: 13px;
+        height: 13px;
+        border-radius: 999px;
+      }
+      .dot.r { background: #ff5f57; }
+      .dot.y { background: #febc2e; }
+      .dot.g { background: #28c840; }
+      .filename {
+        margin-left: 12px;
+        font-family: var(--font-mono);
+        font-size: 15px;
+        color: var(--muted-soft);
+      }
+      .brand {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: var(--font-mono);
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--foreground);
+      }
+      .brand .accent { color: var(--accent); }
+      .brand svg { width: 26px; height: 26px; display: block; }
+
+      /* Content block — kept clear of the left ~260px photo zone */
+      .content {
+        position: absolute;
+        left: 320px;
+        right: 84px;
+        top: 213px; /* vertical center of area below the title bar, nudged up */
+        transform: translateY(-50%);
+        z-index: 2;
+      }
+
+      .eyebrow {
+        font-family: var(--font-mono);
+        font-size: 20px;
+        letter-spacing: 0.01em;
+        color: var(--muted);
+        margin-bottom: 16px;
+      }
+      .eyebrow .slash { color: var(--accent); }
+
+      .name {
+        font-family: var(--font-sans);
+        font-weight: 800;
+        font-size: 84px;
+        line-height: 0.98;
+        letter-spacing: -0.02em;
+        color: var(--foreground);
+      }
+      .name .cursor {
+        display: inline-block;
+        width: 9px;
+        height: 0.86em;
+        margin-left: 11px;
+        vertical-align: -5px;
+        background: var(--accent);
+        border-radius: 2px;
+        box-shadow: 0 0 24px rgba(251, 78, 99, 0.55);
+      }
+
+      .role {
+        margin-top: 20px;
+        font-family: var(--font-mono);
+        font-size: 26px;
+        font-weight: 500;
+        color: var(--muted);
+      }
+      .role .sep { color: var(--accent); padding: 0 4px; }
+      .role .hl { color: var(--foreground); }
+    </style>
+  </head>
+  <body>
+    <div class="banner">
+      <div class="glow glow-a"></div>
+      <div class="glow glow-b"></div>
+
+      <!-- LC monogram watermark -->
+      <svg class="watermark" viewBox="0 0 380 380" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M199.628 379.76C300.088 374.747 380 291.705 380 190C380 85.0659 294.934 0 190 0C179.792 0 169.772 0.805019 160 2.35503V340.262L297 260.088V322.777L199.628 379.76ZM190 91.9937L289 41V88.848L230.308 119.079V216.482L296 178.809V224.92L233.294 260.88L233.308 260.88L232.855 261.132L230.207 262.65L230.187 262.615L190.216 284.835L190.305 262.05L190.308 262.05V92.4765L190 91.9937Z" fill="#fb4e63"/>
+        <path d="M109 18.0813C44.5776 48.4873 0 114.038 0 190C0 265.962 44.5776 331.513 109 361.919V18.0813Z" fill="#fb4e63"/>
+      </svg>
+
+      <div class="titlebar">
+        <span class="dot r"></span>
+        <span class="dot y"></span>
+        <span class="dot g"></span>
+        <span class="filename">lucas-cummings.tsx</span>
+        <span class="brand">
+          <svg viewBox="0 0 380 380" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M199.628 379.76C300.088 374.747 380 291.705 380 190C380 85.0659 294.934 0 190 0C179.792 0 169.772 0.805019 160 2.35503V340.262L297 260.088V322.777L199.628 379.76ZM190 91.9937L289 41V88.848L230.308 119.079V216.482L296 178.809V224.92L233.294 260.88L233.308 260.88L232.855 261.132L230.207 262.65L230.187 262.615L190.216 284.835L190.305 262.05L190.308 262.05V92.4765L190 91.9937Z" fill="#fb4e63"/>
+            <path d="M109 18.0813C44.5776 48.4873 0 114.038 0 190C0 265.962 44.5776 331.513 109 361.919V18.0813Z" fill="#fb4e63"/>
+          </svg>
+          lucas<span class="accent">.</span>cummings
+        </span>
+      </div>
+
+      <div class="content">
+        <div class="eyebrow"><span class="slash">//</span> building regulated fintech</div>
+        <h1 class="name">Lucas Cummings<span class="cursor"></span></h1>
+        <div class="role">
+          Full Stack Engineer <span class="sep">·</span> <span class="hl">Fintech &amp; Payments</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
