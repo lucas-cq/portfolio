@@ -139,11 +139,12 @@
       .brand .accent { color: var(--accent); }
       .brand svg { width: 26px; height: 26px; display: block; }
 
-      /* Content block — kept clear of the left ~260px photo zone */
+      /* Content block — pushed clear of the LinkedIn profile-photo overlay
+         (its widest point reaches ~380px), with comfortable margin. */
       .content {
         position: absolute;
-        left: 320px;
-        right: 84px;
+        left: 500px;
+        right: 72px;
         top: 213px; /* vertical center of area below the title bar, nudged up */
         transform: translateY(-50%);
         z-index: 2;
