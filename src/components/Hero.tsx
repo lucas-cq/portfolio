@@ -56,10 +56,13 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease, delay: 0.05 }}
-              className="text-4xl font-bold leading-[1.05] tracking-tight text-foreground sm:text-6xl"
+              className="font-sans text-5xl font-extrabold leading-[1.02] tracking-tight text-foreground sm:text-7xl"
             >
-              {profile.handle}
-              <span className="text-accent">()</span>
+              {profile.name}
+              <span
+                aria-hidden="true"
+                className="ml-3 inline-block h-[0.8em] w-[0.5rem] translate-y-[0.07em] rounded-[2px] bg-accent shadow-[0_0_24px_rgba(251,78,99,0.55)]"
+              />
             </motion.h1>
 
             <motion.p
