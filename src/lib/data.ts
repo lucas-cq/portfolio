@@ -9,7 +9,7 @@ export const profile = {
   availability: "Open to roles in Calgary or fully remote across Canada",
   tagline: "A modern website built by a web developer.",
   summary:
-    "Full stack engineer with 4+ years of production experience designing, building, and deploying software end to end. I owned a regulated Canadian fintech platform from architecture through APIs, cloud infrastructure, security, and release. Day to day I work across TypeScript, React, Next.js, Node.js, and PostgreSQL on Google Cloud, with real CI/CD, automated testing, and agile delivery. I also ship production Gen AI on the OpenAI API and develop with Claude Code daily. I'm just as comfortable turning technical trade-offs into plain language for non-technical stakeholders.",
+    "My work runs the full stack: architecture, APIs, cloud infrastructure, security, and release, all of it on a regulated Canadian fintech platform. Day to day that means TypeScript, React, Next.js, Node.js, and PostgreSQL on Google Cloud, with real CI/CD, automated testing, and agile delivery. I also ship production Gen AI on the OpenAI API and develop with Claude Code daily, and I'm comfortable turning technical trade-offs into plain language for non-technical stakeholders.",
 };
 
 export const socials = [
@@ -108,7 +108,7 @@ export const projects: Project[] = [
     year: "2024–2026",
     featured: true,
     description:
-      "A regulated Canadian international remittance platform, shipped to iOS, Android, and web from a single Flutter codebase. I owned the full lifecycle as the sole developer, from solution design and estimation through implementation, deployment, production monitoring, and iteration.",
+      "A regulated Canadian international remittance platform, shipped to iOS, Android, and web from a single Flutter codebase. I owned the full lifecycle, from solution design and estimation through implementation, deployment, production monitoring, and iteration.",
     highlights: [
       "Designed and built the transaction reconciliation engine for Interac e-Transfer where no direct API was available at our scale: automated parsing, idempotent matching, duplicate detection, retry handling, and partial-match resolution against live money movement.",
       "Architected the data layer in PostgreSQL alongside a serverless Google Cloud and Firebase backend (Cloud Functions, Auth, FCM), supporting real-time transaction state, notifications, and auditable records for compliance review.",

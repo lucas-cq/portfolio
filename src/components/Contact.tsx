@@ -11,7 +11,7 @@ export default function Contact() {
     <footer id="contact" className="relative scroll-mt-24 overflow-hidden border-t border-border">
       <div className="glow-radial pointer-events-none absolute left-1/2 top-0 h-[500px] w-[800px] -translate-x-1/2 opacity-40" />
 
-      <div className="relative mx-auto max-w-6xl px-5 py-24 sm:px-8 sm:py-32">
+      <div className="relative mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
         <Reveal className="text-center">
           <p className="font-mono text-sm text-accent">// let&apos;s build something</p>
           <h2 className="mx-auto mt-4 max-w-2xl text-4xl font-bold tracking-tight text-foreground sm:text-5xl">

@@ -10,7 +10,7 @@ export default function Journey() {
   return (
     <section
       id="journey"
-      className="relative mx-auto max-w-6xl scroll-mt-24 px-5 py-24 sm:px-8 sm:py-32"
+      className="relative mx-auto max-w-6xl scroll-mt-24 px-5 py-16 sm:px-8 sm:py-24"
     >
       <SectionHeading index="03" kicker="// the path so far" title="My journey" />
 

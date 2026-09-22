@@ -101,7 +101,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease, delay: 0.5 }}
-            className="mt-12 flex max-w-md gap-8"
+            className="mt-8 flex max-w-md gap-8"
           >
             {stats.map((s) => (
               <div key={s.label}>

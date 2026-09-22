@@ -8,8 +8,8 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 export default function Skills() {
   return (
-    <section id="skills" className="relative mx-auto max-w-6xl scroll-mt-24 px-5 py-24 sm:px-8 sm:py-32">
-      <SectionHeading index="01" kicker="// the stack" title="Skills, written in CSS" />
+    <section id="skills" className="relative mx-auto max-w-6xl scroll-mt-24 px-5 py-16 sm:px-8 sm:py-24">
+      <SectionHeading index="01" kicker="// skills" title="The stack" />
 
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1.1fr]">
         {/* Left — summary */}

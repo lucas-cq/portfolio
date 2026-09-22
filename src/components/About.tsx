@@ -14,7 +14,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative mx-auto max-w-6xl scroll-mt-24 px-5 py-24 sm:px-8 sm:py-32"
+      className="relative mx-auto max-w-6xl scroll-mt-24 px-5 py-16 sm:px-8 sm:py-24"
     >
       <SectionHeading index="00" kicker="// who's behind the code" title="A bit about me" />
 
@@ -50,8 +50,9 @@ export default function About() {
           <p className="text-lg leading-relaxed text-muted">
             I&apos;m a full stack engineer who likes shipping things people
             actually use. Over the last 4+ years I took a regulated fintech
-            platform from an empty repo to the App Store, and I care about the
-            small details as much as the big systems.
+            platform from an empty repo to the App Store. I&apos;d rather spend an
+            extra day making the reconciliation logic bulletproof than ship
+            something that quietly loses a transaction.
           </p>
           <p className="mt-5 text-lg leading-relaxed text-muted">
             When I&apos;m not building, you&apos;ll find me somewhere around Calgary

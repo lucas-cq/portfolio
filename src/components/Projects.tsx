@@ -85,7 +85,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="relative mx-auto max-w-6xl scroll-mt-24 px-5 py-24 sm:px-8 sm:py-32"
+      className="relative mx-auto max-w-6xl scroll-mt-24 px-5 py-16 sm:px-8 sm:py-24"
     >
       <SectionHeading index="02" kicker="// selected work" title="Things I've built" />
 
