@@ -62,12 +62,12 @@ export const skills: SkillGroup[] = [
   },
   {
     key: "gen-ai",
-    label: "Gen AI & AI-Assisted SDLC",
+    label: "Gen AI",
     items: ["OpenAI API (production)", "prompt engineering", "AI-accelerated delivery", "Claude Code"],
   },
   {
     key: "delivery",
-    label: "Delivery & Practices",
+    label: "Delivery",
     items: [
       "Git / GitHub",
       "CI/CD",
