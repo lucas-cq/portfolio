@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Lucas Cummings · Full Stack Engineer",
   description:
-    "Full stack engineer with 4+ years of production experience across TypeScript, React, Next.js, Node.js, and PostgreSQL on Google Cloud. I owned a regulated Canadian fintech platform end to end, from architecture through APIs, security, and release.",
+    "Full stack engineer, 4+ years shipping production software end to end. Owned a regulated Canadian fintech platform from architecture through APIs, cloud, security, and release. TypeScript, Node.js, React, PostgreSQL, GCP.",
   keywords: [
     "Lucas Cummings",
     "Full Stack Engineer",

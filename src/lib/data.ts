@@ -9,7 +9,7 @@ export const profile = {
   availability: "Open to roles in Calgary or fully remote across Canada",
   tagline: "A modern website built by a web developer.",
   summary:
-    "My work runs the full stack: architecture, APIs, cloud infrastructure, security, and release, all of it on a regulated Canadian fintech platform. Day to day that means TypeScript, React, Next.js, Node.js, and PostgreSQL on Google Cloud, with real CI/CD, automated testing, and agile delivery. I also ship production Gen AI with the OpenAI API and develop with Claude Code daily, and I'm comfortable turning technical trade-offs into plain language for non-technical stakeholders.",
+    "My work runs the full stack: architecture, APIs, cloud, security, and release, all of it on a regulated Canadian fintech platform. Day to day that means TypeScript, Node.js, React, and PostgreSQL on Google Cloud, with real CI/CD and automated testing. I also ship production Gen AI with the OpenAI API and develop with Claude Code daily.",
 };
 
 export const socials = [
@@ -31,68 +31,47 @@ export type SkillGroup = {
   items: string[];
 };
 
-// Six groups, ordered so each row of the grid holds similarly sized cards.
+// Mirrors the four groups on the resume.
 export const skills: SkillGroup[] = [
   {
-    key: "languages-frameworks",
-    label: "Languages & Frameworks",
+    key: "languages",
+    label: "Languages",
+    items: ["TypeScript", "JavaScript (ES6+)", "SQL", "Dart"],
+  },
+  {
+    key: "frameworks-cloud",
+    label: "Frameworks & Cloud",
     items: [
-      "TypeScript",
-      "JavaScript (ES6+)",
-      "SQL",
-      "Dart",
-      "HTML5",
-      "CSS3",
       "React",
       "Next.js",
-      "Flutter",
-    ],
-  },
-  {
-    key: "backend-cloud",
-    label: "Backend & Cloud",
-    items: [
       "Node.js",
+      "Flutter",
       "Google Cloud Platform",
-      "Firebase (Cloud Functions, Auth, FCM)",
-      "serverless",
+      "Firebase",
       "REST APIs",
-      "webhooks",
-      "third-party integrations",
     ],
   },
   {
-    key: "delivery",
-    label: "Delivery",
+    key: "data-delivery",
+    label: "Data & Delivery",
     items: [
+      "PostgreSQL",
+      "schema design",
+      "query optimization",
       "Git / GitHub",
       "CI/CD",
       "Jest",
-      "code review",
-      "Agile / Scrum",
-      "technical documentation",
-      "App Store / Play Store",
     ],
   },
   {
-    key: "data",
-    label: "Data",
-    items: ["PostgreSQL", "relational schema design", "query optimization", "migrations"],
-  },
-  {
-    key: "gen-ai",
-    label: "Gen AI",
-    items: ["OpenAI API (production)", "prompt engineering", "AI-accelerated delivery", "Claude Code"],
-  },
-  {
-    key: "security-compliance",
-    label: "Security & Compliance",
+    key: "fintech-ai",
+    label: "Fintech & AI",
     items: [
       "KYC/AML (Sumsub)",
       "2FA / MFA",
       "end-to-end encryption",
-      "auditable data design",
-      "PIPEDA",
+      "OpenAI API (production)",
+      "Claude Code",
     ],
   },
 ];
@@ -114,12 +93,12 @@ export const projects: Project[] = [
     year: "2024–2026",
     featured: true,
     description:
-      "A regulated Canadian international remittance platform, shipped to iOS, Android, and web from a single Flutter codebase. I owned the full lifecycle, from solution design and estimation through implementation, deployment, production monitoring, and iteration.",
+      "A regulated Canadian international remittance platform, shipped to iOS, Android, and web from a single Flutter codebase. I owned the full lifecycle, from solution design and estimation through deployment, production monitoring, and iteration.",
     highlights: [
-      "Designed and built the transaction reconciliation engine for Interac e-Transfer where no direct API was available at our scale: automated parsing, idempotent matching, duplicate detection, retry handling, and partial-match resolution against live money movement.",
-      "Architected the data layer in PostgreSQL alongside a serverless Google Cloud and Firebase backend (Cloud Functions, Auth, FCM), supporting real-time transaction state, notifications, and auditable records for compliance review.",
-      "Built and integrated APIs across payment rails and identity, including a full KYC/AML onboarding pipeline via Sumsub, 2FA, and end-to-end encryption to meet Canadian financial regulatory requirements.",
-      "Shipped to iOS, Android, and web from one codebase, owning release management, store submissions, and post-release troubleshooting across the application, data, and infrastructure layers.",
+      "Built the transaction reconciliation engine for Interac e-Transfer where no direct API existed at our scale: idempotent matching, duplicate detection, retry handling, and partial-match resolution against live money movement.",
+      "Architected the PostgreSQL data layer on a serverless Google Cloud and Firebase backend (Cloud Functions, Auth, FCM), supporting real-time transaction state and auditable records for compliance review.",
+      "Built a full KYC/AML onboarding pipeline via Sumsub, plus 2FA and end-to-end encryption, to meet Canadian financial regulatory requirements.",
+      "Shipped to iOS, Android, and web from a single codebase, including release management, store submissions, and post-release troubleshooting.",
     ],
     stack: ["Flutter", "Node.js", "TypeScript", "PostgreSQL", "Firebase", "GCP", "Sumsub"],
   },
@@ -128,10 +107,10 @@ export const projects: Project[] = [
     category: "Gen AI · Automation",
     year: "2023",
     description:
-      "A production Gen AI integration: a Node.js service on the OpenAI API that classifies and filters inbound HubSpot leads, removing the majority of manual lead review for the sales team.",
+      "A production Gen AI integration: a Node.js service on the OpenAI API that classifies and filters inbound HubSpot leads, removing 100% of manual lead review for the sales team.",
     highlights: [
       "OpenAI-driven classification wired into the HubSpot lead pipeline",
-      "Removed the majority of manual triage for the sales team",
+      "Removed 100% of manual lead triage for the sales team",
     ],
     stack: ["Node.js", "OpenAI API", "Webhooks"],
   },
@@ -150,9 +129,9 @@ export const projects: Project[] = [
   {
     name: "Client Web Applications",
     category: "Web · Agency",
-    year: "2022–2026",
+    year: "2022–2024",
     description:
-      "Web applications and third-party API integrations for SMB and enterprise clients, built with Next.js and scoped directly with stakeholders to turn business needs into working software.",
+      "Web applications for SMB and enterprise clients built in Next.js with third-party API integrations, scoped directly with stakeholders.",
     highlights: [
       "Requirements scoped directly with stakeholders",
       "Business needs translated into shippable technical solutions",
@@ -178,24 +157,24 @@ export const journey: TimelineEntry[] = [
     period: "Feb 2024 – May 2026",
     tag: "Fintech",
     points: [
-      "Owned a regulated Canadian remittance platform across the full lifecycle, from solution design and estimation through implementation, deployment, production monitoring, and iteration.",
-      "Designed and built the transaction reconciliation engine for Interac e-Transfer where no direct API was available at our scale: automated parsing, idempotent matching, duplicate detection, retry handling, and partial-match resolution against live money movement.",
-      "Architected the PostgreSQL data layer alongside a serverless Google Cloud and Firebase backend (Cloud Functions, Auth, FCM), supporting real-time transaction state, notifications, and auditable records for compliance review.",
-      "Built and integrated APIs across payment rails and identity, including a full KYC/AML onboarding pipeline via Sumsub, 2FA, and end-to-end encryption to meet Canadian financial regulatory requirements.",
-      "Shipped to iOS, Android, and web from a single codebase, owning release management, store submissions, and post-release troubleshooting.",
+      "Built the transaction reconciliation engine for Interac e-Transfer where no direct API existed at our scale: idempotent matching, duplicate detection, retry handling, and partial-match resolution against live money movement.",
+      "Owned a regulated Canadian remittance platform across the full lifecycle, from solution design and estimation through deployment, production monitoring, and iteration.",
+      "Architected the PostgreSQL data layer on a serverless Google Cloud and Firebase backend (Cloud Functions, Auth, FCM), supporting real-time transaction state and auditable records for compliance review.",
+      "Built a full KYC/AML onboarding pipeline via Sumsub, plus 2FA and end-to-end encryption, to meet Canadian financial regulatory requirements.",
+      "Shipped to iOS, Android, and web from a single codebase, including release management, store submissions, and post-release troubleshooting.",
     ],
   },
   {
     role: "Full Stack Engineer",
     org: "GrowME Marketing",
     location: "Calgary, AB",
-    period: "Jan 2022 – May 2026",
+    period: "Jan 2022 – Feb 2024",
     tag: "Full-time",
     points: [
-      "Delivered web applications for SMB and enterprise clients using Next.js and third-party API integrations, scoping requirements directly with stakeholders and translating business needs into technical solutions.",
-      "Built and shipped a production Gen AI integration: a Node.js service on the OpenAI API that classifies and filters inbound HubSpot leads, removing the majority of manual lead review for the sales team.",
-      "Designed cross-team automations for client onboarding and offboarding, coordinating handoffs across sales, accounts, design, and development.",
-      "Worked within agile delivery cycles across concurrent client engagements, balancing competing priorities and communicating technical trade-offs to non-technical audiences.",
+      "Shipped a production Gen AI integration: a Node.js service on the OpenAI API that classifies and filters inbound HubSpot leads, removing 100% of manual lead review for the sales team.",
+      "Delivered web applications for SMB and enterprise clients in Next.js with third-party API integrations, scoping requirements directly with stakeholders.",
+      "Designed cross-team automations for client onboarding and offboarding across sales, accounts, design, and development.",
+      "Administered client infrastructure: Google Workspace, Cloudflare and DNS configuration (SPF/DMARC), backups, and Linux server hosting.",
     ],
   },
   {

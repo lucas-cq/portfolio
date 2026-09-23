@@ -18,14 +18,14 @@ export default function Skills() {
         <p className="max-w-3xl text-lg leading-relaxed text-muted">{profile.summary}</p>
       </Reveal>
 
-      <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-12 grid gap-5 sm:grid-cols-2">
         {skills.map((group, i) => (
           <motion.div
             key={group.key}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.5, ease, delay: (i % 3) * 0.06 }}
+            transition={{ duration: 0.5, ease, delay: (i % 2) * 0.06 }}
             className="card-hover rounded-2xl border border-border bg-surface p-6"
           >
             <h3 className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-accent">
