@@ -71,9 +71,7 @@ export default function Hero() {
               transition={{ duration: 0.7, ease, delay: 0.15 }}
               className="mt-3 text-xl font-semibold sm:text-2xl"
             >
-              <span className="text-muted-soft">{"// "}</span>
               <span className="text-foreground/85">{profile.role.toLowerCase()}</span>
-              <span className="text-muted-soft"> · {profile.subRole.toLowerCase()}</span>
             </motion.p>
           </div>
 

@@ -13,7 +13,9 @@ export default function Contact() {
 
       <div className="relative mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
         <Reveal className="text-center">
-          <p className="font-mono text-sm text-accent">// let&apos;s build something</p>
+          <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent">
+            Contact
+          </p>
           <h2 className="mx-auto mt-4 max-w-2xl text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
             Have a project in mind?
           </h2>

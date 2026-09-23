@@ -87,7 +87,7 @@ export default function Projects() {
       id="projects"
       className="relative mx-auto max-w-6xl scroll-mt-24 px-5 py-16 sm:px-8 sm:py-24"
     >
-      <SectionHeading index="02" kicker="// selected work" title="Things I've built" />
+      <SectionHeading index="02" kicker="selected work" title="Things I've built" />
 
       <div className="space-y-6">
         {featured && <FeaturedCard project={featured} />}

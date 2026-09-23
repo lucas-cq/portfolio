@@ -9,7 +9,7 @@ export const profile = {
   availability: "Open to roles in Calgary or fully remote across Canada",
   tagline: "A modern website built by a web developer.",
   summary:
-    "My work runs the full stack: architecture, APIs, cloud infrastructure, security, and release, all of it on a regulated Canadian fintech platform. Day to day that means TypeScript, React, Next.js, Node.js, and PostgreSQL on Google Cloud, with real CI/CD, automated testing, and agile delivery. I also ship production Gen AI on the OpenAI API and develop with Claude Code daily, and I'm comfortable turning technical trade-offs into plain language for non-technical stakeholders.",
+    "My work runs the full stack: architecture, APIs, cloud infrastructure, security, and release, all of it on a regulated Canadian fintech platform. Day to day that means TypeScript, React, Next.js, Node.js, and PostgreSQL on Google Cloud, with real CI/CD, automated testing, and agile delivery. I also ship production Gen AI with the OpenAI API and develop with Claude Code daily, and I'm comfortable turning technical trade-offs into plain language for non-technical stakeholders.",
 };
 
 export const socials = [
@@ -20,8 +20,8 @@ export const socials = [
 
 export const navLinks = [
   { label: "about", href: "#about" },
-  { label: "skills", href: "#skills" },
   { label: "projects", href: "#projects" },
+  { label: "skills", href: "#skills" },
   { label: "journey", href: "#journey" },
 ];
 
@@ -31,22 +31,28 @@ export type SkillGroup = {
   items: string[];
 };
 
-// Styled as a CSS rule block in the Skills section — a nod to the original "CSS" nav pun.
+// Six groups, ordered so each row of the grid holds similarly sized cards.
 export const skills: SkillGroup[] = [
   {
-    key: "languages",
-    label: "Languages",
-    items: ["TypeScript", "JavaScript (ES6+)", "SQL", "Dart", "HTML5", "CSS3"],
-  },
-  {
-    key: "frameworks-frontend",
-    label: "Frameworks & Frontend",
-    items: ["React", "Next.js", "Node.js", "Flutter"],
-  },
-  {
-    key: "cloud-integration",
-    label: "Cloud & Integration",
+    key: "languages-frameworks",
+    label: "Languages & Frameworks",
     items: [
+      "TypeScript",
+      "JavaScript (ES6+)",
+      "SQL",
+      "Dart",
+      "HTML5",
+      "CSS3",
+      "React",
+      "Next.js",
+      "Flutter",
+    ],
+  },
+  {
+    key: "backend-cloud",
+    label: "Backend & Cloud",
+    items: [
+      "Node.js",
       "Google Cloud Platform",
       "Firebase (Cloud Functions, Auth, FCM)",
       "serverless",
@@ -54,16 +60,6 @@ export const skills: SkillGroup[] = [
       "webhooks",
       "third-party integrations",
     ],
-  },
-  {
-    key: "data",
-    label: "Data",
-    items: ["PostgreSQL", "relational schema design", "query optimization", "migrations"],
-  },
-  {
-    key: "gen-ai",
-    label: "Gen AI",
-    items: ["OpenAI API (production)", "prompt engineering", "AI-accelerated delivery", "Claude Code"],
   },
   {
     key: "delivery",
@@ -77,6 +73,16 @@ export const skills: SkillGroup[] = [
       "technical documentation",
       "App Store / Play Store",
     ],
+  },
+  {
+    key: "data",
+    label: "Data",
+    items: ["PostgreSQL", "relational schema design", "query optimization", "migrations"],
+  },
+  {
+    key: "gen-ai",
+    label: "Gen AI",
+    items: ["OpenAI API (production)", "prompt engineering", "AI-accelerated delivery", "Claude Code"],
   },
   {
     key: "security-compliance",
@@ -166,8 +172,8 @@ export type TimelineEntry = {
 
 export const journey: TimelineEntry[] = [
   {
-    role: "Full Stack Engineer, Universe Money Transfer",
-    org: "Fintech venture within GrowME",
+    role: "Full Stack Engineer",
+    org: "Universe Money Transfer",
     location: "Calgary, AB",
     period: "Feb 2024 – May 2026",
     tag: "Fintech",

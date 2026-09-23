@@ -12,7 +12,7 @@ export default function Journey() {
       id="journey"
       className="relative mx-auto max-w-6xl scroll-mt-24 px-5 py-16 sm:px-8 sm:py-24"
     >
-      <SectionHeading index="03" kicker="// the path so far" title="My journey" />
+      <SectionHeading index="04" kicker="experience" title="My journey" />
 
       <div className="relative">
         {/* Vertical line */}
@@ -21,7 +21,7 @@ export default function Journey() {
         <div className="space-y-10">
           {journey.map((entry, i) => (
             <motion.div
-              key={entry.role}
+              key={`${entry.org}-${entry.period}`}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}

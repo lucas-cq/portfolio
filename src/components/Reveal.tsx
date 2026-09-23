@@ -40,10 +40,11 @@ export function SectionHeading({
 }) {
   return (
     <Reveal className="mb-12">
-      <div className="mb-3 flex items-center gap-3 font-mono text-sm text-accent">
-        <span className="text-muted-soft">{index}</span>
-        <span className="h-px w-8 bg-accent/40" />
-        {kicker}
+      <div className="mb-5 flex items-center gap-4">
+        <span className="font-mono text-sm font-semibold text-accent">{index}</span>
+        <span className="font-mono text-xs uppercase tracking-[0.25em] text-muted">
+          {kicker}
+        </span>
       </div>
       <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
         {title}

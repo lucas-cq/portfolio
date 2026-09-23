@@ -16,7 +16,7 @@ export default function About() {
       id="about"
       className="relative mx-auto max-w-6xl scroll-mt-24 px-5 py-16 sm:px-8 sm:py-24"
     >
-      <SectionHeading index="00" kicker="// who's behind the code" title="A bit about me" />
+      <SectionHeading index="01" kicker="about" title="A bit about me" />
 
       <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[0.8fr_1.2fr]">
         {/* Photo */}
@@ -50,9 +50,7 @@ export default function About() {
           <p className="text-lg leading-relaxed text-muted">
             I&apos;m a full stack engineer who likes shipping things people
             actually use. Over the last 4+ years I took a regulated fintech
-            platform from an empty repo to the App Store. I&apos;d rather spend an
-            extra day making the reconciliation logic bulletproof than ship
-            something that quietly loses a transaction.
+            platform from an empty repo to the App Store.
           </p>
           <p className="mt-5 text-lg leading-relaxed text-muted">
             When I&apos;m not building, you&apos;ll find me somewhere around Calgary
