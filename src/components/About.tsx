@@ -29,7 +29,7 @@ export default function About() {
                   src="/lucas.webp"
                   alt={`${profile.name}, ${profile.role}`}
                   fill
-                  sizes="(max-width: 1024px) 90vw, 360px"
+                  sizes="(max-width: 1024px) 90vw, 384px"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   priority
                 />
